@@ -131,6 +131,7 @@
   set sctp    disabled=yes
 
 # NOTE; See file address-lists.rsc for IPs of game servers
+
 /ipv6 firewall address-list
   add list=bad_ipv6 address=::/128            comment="defconf: unspecified address"
   add list=bad_ipv6 address=::1/128           comment="defconf: lo"

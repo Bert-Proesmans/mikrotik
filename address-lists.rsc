@@ -2,157 +2,328 @@
 #
 # model = RB750Gr3
 
+# Create your own IP address lists using public IP information
+#
+# 1. Find metadata for the Autonomous System Number (ASN) of the company.
+#     Google "asn hurricane electric <company: riotgames>"
+# 2. Click tab "Prefixes v4"
+# 3. Copy paste those IP addresses into the same shape as the data below
+# 4. Click tab "Prefixes v6"
+# 5. Copy paste those IP addresses into the same shape as the data below (bottom of file)
+#
+# You can use these regexes to clean-up data:
+# - ^(?!\d+\.\d+).*$
+# - ^(?![\da-e]+:[\da-e]+).*$
+# - ^\n
+
 /ip firewall address-list
-  add list=games address=8.23.24.0/23      comment="customconf: League of Legends West"
-  add list=games address=43.229.64.0/22    comment="customconf: League of Legends West"
-  add list=games address=43.229.64.0/24    comment="customconf: League of Legends West"
-  add list=games address=43.229.65.0/24    comment="customconf: League of Legends West"
-  add list=games address=43.229.66.0/24    comment="customconf: League of Legends West"
-  add list=games address=43.229.67.0/24    comment="customconf: League of Legends West"
-  add list=games address=45.7.36.0/24      comment="customconf: League of Legends West"
-  add list=games address=45.7.39.0/24      comment="customconf: League of Legends West"
-  add list=games address=45.250.208.0/22   comment="customconf: League of Legends West"
-  add list=games address=66.151.33.0/24    comment="customconf: League of Legends West"
-  add list=games address=103.219.128.0/22  comment="customconf: League of Legends West"
-  add list=games address=103.240.224.0/24  comment="customconf: League of Legends West"
-  add list=games address=103.240.225.0/24  comment="customconf: League of Legends West"
-  add list=games address=103.240.226.0/23  comment="customconf: League of Legends West"
-  add list=games address=104.160.128.0/19  comment="customconf: League of Legends West"
-  add list=games address=104.160.128.0/20  comment="customconf: League of Legends West"
-  add list=games address=104.160.134.0/24  comment="customconf: League of Legends West"
-  add list=games address=104.160.135.0/24  comment="customconf: League of Legends West"
-  add list=games address=104.160.136.0/24  comment="customconf: League of Legends West"
-  add list=games address=104.160.139.0/24  comment="customconf: League of Legends West"
-  add list=games address=104.160.141.0/24  comment="customconf: League of Legends West"
-  add list=games address=104.160.142.0/24  comment="customconf: League of Legends West"
-  add list=games address=104.160.143.0/24  comment="customconf: League of Legends West"
-  add list=games address=104.160.144.0/24  comment="customconf: League of Legends West"
-  add list=games address=104.160.145.0/24  comment="customconf: League of Legends West"
-  add list=games address=104.160.146.0/24  comment="customconf: League of Legends West"
-  add list=games address=104.160.147.0/24  comment="customconf: League of Legends West"
-  add list=games address=104.160.148.0/24  comment="customconf: League of Legends West"
-  add list=games address=104.160.149.0/24  comment="customconf: League of Legends West"
-  add list=games address=104.160.152.0/21  comment="customconf: League of Legends West"
-  add list=games address=104.160.153.0/24  comment="customconf: League of Legends West"
-  add list=games address=104.160.154.0/24  comment="customconf: League of Legends West"
-  add list=games address=104.160.155.0/24  comment="customconf: League of Legends West"
-  add list=games address=104.160.156.0/24  comment="customconf: League of Legends West"
-  add list=games address=110.45.191.0/24   comment="customconf: League of Legends West"
-  add list=games address=117.52.75.0/24    comment="customconf: League of Legends West"
-  add list=games address=117.52.76.0/22    comment="customconf: League of Legends West"
-  add list=games address=117.52.101.0/24   comment="customconf: League of Legends West"
-  add list=games address=138.0.12.0/22     comment="customconf: League of Legends West"
-  add list=games address=138.0.12.0/24     comment="customconf: League of Legends West"
-  add list=games address=138.0.13.0/24     comment="customconf: League of Legends West"
-  add list=games address=138.0.14.0/24     comment="customconf: League of Legends West"
-  add list=games address=138.0.15.0/24     comment="customconf: League of Legends West"
-  add list=games address=162.249.72.0/22   comment="customconf: League of Legends West"
-  add list=games address=162.249.76.0/22   comment="customconf: League of Legends West"
-  add list=games address=162.249.79.0/24   comment="customconf: League of Legends West"
-  add list=games address=182.162.120.0/21  comment="customconf: League of Legends West"
-  add list=games address=185.40.64.0/22    comment="customconf: League of Legends West"
-  add list=games address=192.64.168.0/24   comment="customconf: League of Legends West"
-  add list=games address=192.64.169.0/24   comment="customconf: League of Legends West"
-  add list=games address=192.64.170.0/24   comment="customconf: League of Legends West"
-  add list=games address=192.64.171.0/24   comment="customconf: League of Legends West"
-  add list=games address=192.64.172.0/24   comment="customconf: League of Legends West"
-  add list=games address=192.64.173.0/24   comment="customconf: League of Legends West"
-  add list=games address=192.64.174.0/24   comment="customconf: League of Legends West"
-  add list=games address=192.64.175.0/24   comment="customconf: League of Legends West"
-  add list=games address=146.66.152.0/23   comment="customconf: Steam Europe"
-  add list=games address=146.66.154.0/24   comment="customconf: Steam Europe"
-  add list=games address=146.66.155.0/24   comment="customconf: Steam Europe"
-  add list=games address=146.66.156.0/23   comment="customconf: Steam Europe"
-  add list=games address=146.66.158.0/23   comment="customconf: Steam Europe"
-  add list=games address=185.25.180.0/23   comment="customconf: Steam Europe"
-  add list=games address=185.25.182.0/24   comment="customconf: Steam Europe"
-  add list=games address=185.25.183.0/24   comment="customconf: Steam Europe"
-  add list=games address=155.133.224.0/23  comment="customconf: Steam Europe"
-  add list=games address=155.133.227.0/24  comment="customconf: Steam Europe"
-  add list=games address=155.133.228.0/23  comment="customconf: Steam Europe"
-  add list=games address=155.133.230.0/23  comment="customconf: Steam Europe"
-  add list=games address=155.133.232.0/24  comment="customconf: Steam Europe"
-  add list=games address=155.133.233.0/24  comment="customconf: Steam Europe"
-  add list=games address=155.133.234.0/24  comment="customconf: Steam Europe"
-  add list=games address=155.133.235.0/24  comment="customconf: Steam Europe"
-  add list=games address=155.133.236.0/23  comment="customconf: Steam Europe"
-  add list=games address=155.133.238.0/24  comment="customconf: Steam Europe"
-  add list=games address=155.133.239.0/24  comment="customconf: Steam Europe"
-  add list=games address=155.133.240.0/23  comment="customconf: Steam Europe"
-  add list=games address=155.133.242.0/23  comment="customconf: Steam Europe"
-  add list=games address=155.133.244.0/24  comment="customconf: Steam Europe"
-  add list=games address=155.133.245.0/24  comment="customconf: Steam Europe"
-  add list=games address=155.133.246.0/23  comment="customconf: Steam Europe"
-  add list=games address=155.133.248.0/24  comment="customconf: Steam Europe"
-  add list=games address=155.133.249.0/24  comment="customconf: Steam Europe"
-  add list=games address=155.133.250.0/24  comment="customconf: Steam Europe"
-  add list=games address=155.133.252.0/24  comment="customconf: Steam Europe"
-  add list=games address=155.133.253.0/24  comment="customconf: Steam Europe"
-  add list=games address=155.133.254.0/24  comment="customconf: Steam Europe"
-  add list=games address=155.133.255.0/24  comment="customconf: Steam Europe"
-  add list=games address=5.42.160.0/20     comment="customconf: Blizzard Europe"
-  add list=games address=5.42.176.0/20     comment="customconf: Blizzard Europe"
-  add list=games address=37.244.15.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.16.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.17.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.18.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.19.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.20.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.21.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.22.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.23.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.24.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.25.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.26.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.27.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.28.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.29.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.30.0/23    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.32.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.33.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.34.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.35.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.36.0/23    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.38.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.40.0/22    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.44.0/22    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.48.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.49.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.50.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.52.0/23    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.54.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.55.0/24    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.56.0/23    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.58.0/23    comment="customconf: Blizzard Europe"
-  add list=games address=37.244.60.0/22    comment="customconf: Blizzard Europe"
-  add list=games address=185.60.112.0/23   comment="customconf: Blizzard Europe"
-  add list=games address=185.60.114.0/23   comment="customconf: Blizzard Europe"
-  add list=games address=137.221.64.0/19   comment="customconf: Blizzard Europe"
-  add list=games address=137.221.64.0/24   comment="customconf: Blizzard Europe"
-  add list=games address=137.221.68.0/24   comment="customconf: Blizzard Europe"
-  add list=games address=137.221.69.0/24   comment="customconf: Blizzard Europe"
-  add list=games address=137.221.70.0/24   comment="customconf: Blizzard Europe"
-  add list=games address=137.221.71.0/24   comment="customconf: Blizzard Europe"
-  add list=games address=137.221.72.0/24   comment="customconf: Blizzard Europe"
-  add list=games address=137.221.73.0/24   comment="customconf: Blizzard Europe"
-  add list=games address=137.221.74.0/24   comment="customconf: Blizzard Europe"
-  add list=games address=137.221.75.0/24   comment="customconf: Blizzard Europe"
-  add list=games address=137.221.76.0/24   comment="customconf: Blizzard Europe"
-  add list=games address=137.221.77.0/24   comment="customconf: Blizzard Europe"
-  add list=games address=137.221.78.0/24   comment="customconf: Blizzard Europe"
-  add list=games address=137.221.79.0/24   comment="customconf: Blizzard Europe"
-  add list=games address=137.221.80.0/24   comment="customconf: Blizzard Europe"
-  add list=games address=137.221.81.0/24   comment="customconf: Blizzard Europe"
-  add list=games address=137.221.82.0/24   comment="customconf: Blizzard Europe"
-  add list=games address=137.221.83.0/24   comment="customconf: Blizzard Europe"
-  add list=games address=137.221.84.0/24   comment="customconf: Blizzard Europe"
-  add list=games address=137.221.85.0/24   comment="customconf: Blizzard Europe"
-  add list=games address=137.221.86.0/24   comment="customconf: Blizzard Europe"
-  add list=games address=137.221.96.0/22   comment="customconf: Blizzard Europe"
-  add list=games address=137.221.100.0/22  comment="customconf: Blizzard Europe"
-  add list=games address=137.221.104.0/22  comment="customconf: Blizzard Europe"
+  # IPv4 addresses
+  add list=games comment="customconf: RiotGames" address=43.229.64.0/22
+  add list=games comment="customconf: RiotGames" address=43.229.65.0/24
+  add list=games comment="customconf: RiotGames" address=45.7.36.0/22
+  add list=games comment="customconf: RiotGames" address=45.7.36.0/24
+  add list=games comment="customconf: RiotGames" address=45.7.37.0/24
+  add list=games comment="customconf: RiotGames" address=45.7.38.0/24
+  add list=games comment="customconf: RiotGames" address=45.7.39.0/24
+  add list=games comment="customconf: RiotGames" address=45.250.208.0/22
+  add list=games comment="customconf: RiotGames" address=103.219.128.0/22
+  add list=games comment="customconf: RiotGames" address=103.240.224.0/22
+  add list=games comment="customconf: RiotGames" address=104.160.128.0/19
+  add list=games comment="customconf: RiotGames" address=104.160.156.0/24
+  add list=games comment="customconf: RiotGames" address=138.0.12.0/23
+  add list=games comment="customconf: RiotGames" address=138.0.12.0/24
+  add list=games comment="customconf: RiotGames" address=138.0.14.0/24
+  add list=games comment="customconf: RiotGames" address=138.0.15.0/24
+  add list=games comment="customconf: RiotGames" address=151.106.246.0/24
+  add list=games comment="customconf: RiotGames" address=151.106.247.0/24
+  add list=games comment="customconf: RiotGames" address=151.106.248.0/24
+  add list=games comment="customconf: RiotGames" address=151.106.249.0/24
+  add list=games comment="customconf: RiotGames" address=151.106.250.0/23
+  add list=games comment="customconf: RiotGames" address=151.106.252.0/24
+  add list=games comment="customconf: RiotGames" address=151.106.253.0/24
+  add list=games comment="customconf: RiotGames" address=151.106.254.0/24
+  add list=games comment="customconf: RiotGames" address=162.249.72.0/21
+  add list=games comment="customconf: RiotGames" address=162.249.72.0/22
+  add list=games comment="customconf: RiotGames" address=162.249.72.0/24
+  add list=games comment="customconf: RiotGames" address=162.249.75.0/24
+  add list=games comment="customconf: RiotGames" address=162.249.76.0/22
+  add list=games comment="customconf: RiotGames" address=185.40.64.0/22
+  add list=games comment="customconf: RiotGames" address=185.40.64.0/24
+  add list=games comment="customconf: RiotGames" address=192.64.168.0/21
+  add list=games comment="customconf: RiotGames" address=192.64.170.0/24
+  add list=games comment="customconf: RiotGames" address=192.64.171.0/24
+  add list=games comment="customconf: RiotGames" address=192.64.173.0/24
+  add list=games comment="customconf: RiotGames" address=192.207.0.0/24
+  add list=games comment="customconf: ValveCorporation" address=45.121.184.0/24
+  add list=games comment="customconf: ValveCorporation" address=103.10.124.0/24
+  add list=games comment="customconf: ValveCorporation" address=103.10.125.0/24
+  add list=games comment="customconf: ValveCorporation" address=103.28.54.0/24
+  add list=games comment="customconf: ValveCorporation" address=146.66.152.0/24
+  add list=games comment="customconf: ValveCorporation" address=146.66.155.0/24
+  add list=games comment="customconf: ValveCorporation" address=155.133.224.0/24
+  add list=games comment="customconf: ValveCorporation" address=155.133.225.0/24
+  add list=games comment="customconf: ValveCorporation" address=155.133.226.0/24
+  add list=games comment="customconf: ValveCorporation" address=155.133.227.0/24
+  add list=games comment="customconf: ValveCorporation" address=155.133.228.0/24
+  add list=games comment="customconf: ValveCorporation" address=155.133.229.0/24
+  add list=games comment="customconf: ValveCorporation" address=155.133.230.0/24
+  add list=games comment="customconf: ValveCorporation" address=155.133.231.0/24
+  add list=games comment="customconf: ValveCorporation" address=155.133.236.0/23
+  add list=games comment="customconf: ValveCorporation" address=155.133.238.0/24
+  add list=games comment="customconf: ValveCorporation" address=155.133.239.0/24
+  add list=games comment="customconf: ValveCorporation" address=155.133.240.0/23
+  add list=games comment="customconf: ValveCorporation" address=155.133.244.0/24
+  add list=games comment="customconf: ValveCorporation" address=155.133.246.0/24
+  add list=games comment="customconf: ValveCorporation" address=155.133.248.0/24
+  add list=games comment="customconf: ValveCorporation" address=155.133.249.0/24
+  add list=games comment="customconf: ValveCorporation" address=155.133.250.0/24
+  add list=games comment="customconf: ValveCorporation" address=155.133.251.0/24
+  add list=games comment="customconf: ValveCorporation" address=155.133.252.0/24
+  add list=games comment="customconf: ValveCorporation" address=155.133.254.0/24
+  add list=games comment="customconf: ValveCorporation" address=155.133.255.0/24
+  add list=games comment="customconf: ValveCorporation" address=162.254.192.0/24
+  add list=games comment="customconf: ValveCorporation" address=162.254.193.0/24
+  add list=games comment="customconf: ValveCorporation" address=162.254.194.0/24
+  add list=games comment="customconf: ValveCorporation" address=162.254.195.0/24
+  add list=games comment="customconf: ValveCorporation" address=162.254.196.0/24
+  add list=games comment="customconf: ValveCorporation" address=162.254.197.0/24
+  add list=games comment="customconf: ValveCorporation" address=162.254.198.0/24
+  add list=games comment="customconf: ValveCorporation" address=162.254.199.0/24
+  add list=games comment="customconf: ValveCorporation" address=185.25.180.0/24
+  add list=games comment="customconf: ValveCorporation" address=185.25.182.0/24
+  add list=games comment="customconf: ValveCorporation" address=185.25.183.0/24
+  add list=games comment="customconf: ValveCorporation" address=192.69.96.0/22
+  add list=games comment="customconf: ValveCorporation" address=205.196.6.0/24
+  add list=games comment="customconf: ValveCorporation" address=208.64.200.0/24
+  add list=games comment="customconf: ValveCorporation" address=208.64.201.0/24
+  add list=games comment="customconf: ValveCorporation" address=208.64.202.0/24
+  add list=games comment="customconf: ValveCorporation" address=208.64.203.0/24
+  add list=games comment="customconf: ValveCorporation" address=208.78.164.0/22
+  add list=games comment="customconf: BlizzardEntertainment" address=5.42.160.0/22
+  add list=games comment="customconf: BlizzardEntertainment" address=5.42.164.0/22
+  add list=games comment="customconf: BlizzardEntertainment" address=5.42.168.0/22
+  add list=games comment="customconf: BlizzardEntertainment" address=5.42.172.0/22
+  add list=games comment="customconf: BlizzardEntertainment" address=5.42.176.0/23
+  add list=games comment="customconf: BlizzardEntertainment" address=5.42.178.0/23
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.0.0/22
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.16.0/23
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.18.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.19.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.25.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.27.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.28.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.29.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.30.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.31.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.32.0/21
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.40.0/21
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.50.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.51.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.52.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.53.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.54.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.55.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.56.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.57.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.59.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.60.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.61.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.62.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=24.105.63.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.0.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.2.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.3.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.4.0/22
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.8.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.9.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.10.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.13.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.14.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.15.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.16.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.17.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.19.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.20.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.23.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.24.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.25.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.26.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.27.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.28.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.29.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.30.0/23
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.32.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.33.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.34.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.35.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.36.0/23
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.38.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.40.0/22
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.44.0/22
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.50.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.52.0/23
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.54.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.55.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.56.0/23
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.58.0/23
+  add list=games comment="customconf: BlizzardEntertainment" address=37.244.60.0/22
+  add list=games comment="customconf: BlizzardEntertainment" address=59.153.40.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=59.153.41.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=59.153.42.0/23
+  add list=games comment="customconf: BlizzardEntertainment" address=64.224.0.0/21
+  add list=games comment="customconf: BlizzardEntertainment" address=64.224.24.0/23
+  add list=games comment="customconf: BlizzardEntertainment" address=64.224.26.0/23
+  add list=games comment="customconf: BlizzardEntertainment" address=64.224.28.0/22
+  add list=games comment="customconf: BlizzardEntertainment" address=66.40.176.0/22
+  add list=games comment="customconf: BlizzardEntertainment" address=66.40.180.0/22
+  add list=games comment="customconf: BlizzardEntertainment" address=66.40.184.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=66.40.185.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=66.40.186.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=66.40.187.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=66.40.188.0/23
+  add list=games comment="customconf: BlizzardEntertainment" address=66.40.190.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=66.40.191.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=103.4.114.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=103.4.115.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=103.198.32.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=103.198.33.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=110.45.168.160/27
+  add list=games comment="customconf: BlizzardEntertainment" address=117.52.6.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=117.52.26.0/23
+  add list=games comment="customconf: BlizzardEntertainment" address=117.52.28.0/23
+  add list=games comment="customconf: BlizzardEntertainment" address=117.52.33.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=117.52.34.0/23
+  add list=games comment="customconf: BlizzardEntertainment" address=117.52.36.0/23
+  add list=games comment="customconf: BlizzardEntertainment" address=117.52.161.192/26
+  add list=games comment="customconf: BlizzardEntertainment" address=121.254.137.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=121.254.206.0/23
+  add list=games comment="customconf: BlizzardEntertainment" address=121.254.218.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.64.0/19
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.64.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.68.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.69.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.70.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.72.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.73.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.74.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.75.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.76.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.77.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.78.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.79.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.80.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.81.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.82.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.84.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.85.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.86.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.88.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.89.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.95.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.96.0/22
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.100.0/22
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.104.0/22
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.108.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.109.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.110.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.111.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=137.221.112.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=150.116.9.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=158.115.192.0/23
+  add list=games comment="customconf: BlizzardEntertainment" address=158.115.194.0/23
+  add list=games comment="customconf: BlizzardEntertainment" address=158.115.196.0/23
+  add list=games comment="customconf: BlizzardEntertainment" address=158.115.198.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=158.115.199.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=158.115.200.0/21
+  add list=games comment="customconf: BlizzardEntertainment" address=158.115.216.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=158.115.217.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=158.115.218.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=158.115.219.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=158.115.220.0/23
+  add list=games comment="customconf: BlizzardEntertainment" address=158.115.222.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=158.115.223.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=182.162.31.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=185.60.112.0/23
+  add list=games comment="customconf: BlizzardEntertainment" address=185.60.114.0/23
+  add list=games comment="customconf: BlizzardEntertainment" address=198.74.32.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=198.74.33.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=198.74.34.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=198.74.35.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=198.74.36.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=198.74.37.0/24
+  add list=games comment="customconf: BlizzardEntertainment" address=202.9.66.0/23
+  add list=games comment="customconf: BlizzardEntertainment" address=211.115.123.64/27
+  add list=games comment="customconf: BlizzardEntertainment" address=211.115.123.96/27
+  add list=games comment="customconf: BlizzardEntertainment" address=211.234.103.64/26
+  add list=games comment="customconf: BlizzardEntertainment" address=211.234.104.192/27
+
 
 /ipv6 firewall address-list
-  add list=games address=2801:1b:6000::/48 comment="customconf: LoL (Europe)"
-  add list=games address=2a04:82c0::/29    comment="customconf: LoL (Europe)"
-  add list=games address=2804:3ec0::/32    comment="customconf: LoL (Europe)"
+  # IPv6 addresses
+  add list=games comment="customconf: RiotGames" address=2a04:82c0::/29
+  add list=games comment="customconf: ValveCorporation" address=2404:3fc0::/48
+  add list=games comment="customconf: ValveCorporation" address=2404:3fc0:1::/48
+  add list=games comment="customconf: ValveCorporation" address=2404:3fc0:2::/48
+  add list=games comment="customconf: ValveCorporation" address=2404:3fc0:3::/48
+  add list=games comment="customconf: ValveCorporation" address=2404:3fc0:8::/48
+  add list=games comment="customconf: ValveCorporation" address=2404:3fc0:9::/48
+  add list=games comment="customconf: ValveCorporation" address=2404:3fc0:a::/48
+  add list=games comment="customconf: ValveCorporation" address=2602:801:f000::/48
+  add list=games comment="customconf: ValveCorporation" address=2602:801:f001::/48
+  add list=games comment="customconf: ValveCorporation" address=2602:801:f002::/48
+  add list=games comment="customconf: ValveCorporation" address=2602:801:f003::/48
+  add list=games comment="customconf: ValveCorporation" address=2602:801:f005::/48
+  add list=games comment="customconf: ValveCorporation" address=2602:801:f006::/48
+  add list=games comment="customconf: ValveCorporation" address=2602:801:f007::/48
+  add list=games comment="customconf: ValveCorporation" address=2602:801:f008::/48
+  add list=games comment="customconf: ValveCorporation" address=2602:801:f009::/48
+  add list=games comment="customconf: ValveCorporation" address=2602:801:f00a::/48
+  add list=games comment="customconf: ValveCorporation" address=2602:801:f00b::/48
+  add list=games comment="customconf: ValveCorporation" address=2602:801:f00c::/48
+  add list=games comment="customconf: ValveCorporation" address=2602:801:f00d::/48
+  add list=games comment="customconf: ValveCorporation" address=2602:801:f00e::/48
+  add list=games comment="customconf: ValveCorporation" address=2602:801:f00f::/48
+  add list=games comment="customconf: ValveCorporation" address=2a01:bc80::/48
+  add list=games comment="customconf: ValveCorporation" address=2a01:bc80:1::/48
+  add list=games comment="customconf: ValveCorporation" address=2a01:bc80:2::/48
+  add list=games comment="customconf: ValveCorporation" address=2a01:bc80:3::/48
+  add list=games comment="customconf: ValveCorporation" address=2a01:bc80:4::/48
+  add list=games comment="customconf: ValveCorporation" address=2a01:bc80:5::/48
+  add list=games comment="customconf: ValveCorporation" address=2a01:bc80:6::/48
+  add list=games comment="customconf: ValveCorporation" address=2a01:bc80:7::/48
+  add list=games comment="customconf: ValveCorporation" address=2a01:bc80:8::/48
+  add list=games comment="customconf: ValveCorporation" address=2a01:bc80:9::/48
+  add list=games comment="customconf: ValveCorporation" address=2a01:bc80:a::/48
+  add list=games comment="customconf: ValveCorporation" address=2a01:bc80:b::/48
+  add list=games comment="customconf: ValveCorporation" address=2a01:bc80:c::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e800:5010::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e800:5011::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e800:5014::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e800:5016::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e800:5020::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e800:5023::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e800:5040::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e800:5407::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e802::/32
+  add list=games comment="customconf: ValveCorporation" address=2a04:e802::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e802:3::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e802:4::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e802:5::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e802:7::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e802:8::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e802:9::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e802:a::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e802:b::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e802:c::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e802:d::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e802:e::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e802:f::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e802:10::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e802:11::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e802:14::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e802:15::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e802:17::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e802:18::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e802:1e::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e802:1f::/48
+  add list=games comment="customconf: ValveCorporation" address=2a04:e802:20::/48

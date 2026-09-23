@@ -275,8 +275,11 @@
     add-default-route=yes  default-route-distance=10 default-route-tables=main:10
 
 
+# ERROR; There is a bug in the certificate validation algorithm for DoH.
+# Registering a root-CA to verify the certificate chain returned by the server is not enough to validate. The mikrotik only accepts connections when the
+# intermediate certificate is present on-device. Since these intermediates expire often, I disabled cert-validation as a workaround.
 /ip dns
-  set use-doh-server=https://security.cloudflare-dns.com/dns-query verify-doh-cert=yes
+  set use-doh-server=https://security.cloudflare-dns.com/dns-query verify-doh-cert=no
   set cache-size=9216KiB
   set allow-remote-requests=yes
 /ip dns adlist
